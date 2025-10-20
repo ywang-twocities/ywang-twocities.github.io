@@ -9,28 +9,26 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Cormorant+Garamond:wght@400;600&family=Commissioner:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Skeleton Framework -->
+  <!-- Skeleton (可保留，主要用于网格与重置) -->
   <link rel="stylesheet" href="{{ '/libs/external/skeleton/normalize.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/libs/external/skeleton/skeleton.css' | relative_url }}">
 
-  <!-- Font Awesome & Academicons -->
+  <!-- Icons -->
   <link rel="stylesheet" href="{{ '/libs/external/font-awesome-4.7.0/css/font-awesome.min.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/libs/external/academicons-1.8.6/css/academicons.min.css' | relative_url }}">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ '/assets/custom/my_css.css' | relative_url }}">
-
-  <!-- JQuery -->
-  <script src="{{ '/libs/external/jquery-3.1.1.min.js' | relative_url }}"></script>
-
 </head>
 <body>
 
-  <div class="container">
+  <div class="page">   <!-- 统一的版心容器：控制居中与宽度 -->
     {% include header.html %}
-    <main>
+
+    <main class="content">
       {{ content }}
     </main>
+
     {% include footer.html %}
   </div>
 

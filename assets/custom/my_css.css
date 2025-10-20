@@ -1,4 +1,87 @@
-/* ===== Navigation Bar ===== */
+/* ===== 基础与全局居中 ===== */
+body {
+  font-family: 'Libre Baskerville', serif;
+  color: #222;
+  background-color: #fafafa;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.page {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  background: #fff;
+}
+
+/* ===== Header 部分 ===== */
+.header-flex {
+  display: flex;
+  align-items: flex-start;   /* 顶部对齐 */
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.header-photo img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px; /* 与头像等高 */
+}
+
+.header-info p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ==== 四行信息样式 ==== */
+.header-info .name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+
+.header-info .position {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  color: #111;
+}
+
+.header-info .email {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  color: #555;
+}
+
+.header-info .social {
+  font-family: 'Commissioner', sans-serif;
+  font-size: 15px;
+}
+
+.header-info .social a {
+  margin-right: 18px;
+  text-decoration: none;
+  color: #004d7a;
+  border-bottom: 1px solid rgba(0,77,122,0.25);
+  transition: color .2s ease, border-color .2s ease;
+}
+
+.header-info .social a:hover {
+  color: #002f49;
+  border-bottom-color: #002f49;
+}
+
+/* ===== 导航栏居中、无 bullet ===== */
 .navbar {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -8,25 +91,25 @@
 }
 
 .navbar-inner {
-  max-width: 900px;       /* 与主体内容同宽 */
-  margin: 0 auto;         /* 居中 */
-  text-align: center;     /* 让文字居中 */
+  max-width: 900px; /* 与主体内容一致 */
+  margin: 0 auto;
+  text-align: center;
 }
 
 .navbar-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
   display: flex;
-  justify-content: center; /* 完全居中 */
+  justify-content: center; /* 居中 */
   align-items: center;
-  gap: 2rem;                /* 均匀间距 */
+  gap: 2rem; /* 等距 */
 }
 
 .navbar-list li {
   margin: 0;
   padding: 0;
+  list-style: none !important;
 }
 
 .navbar-list a {
@@ -41,3 +124,10 @@
 .navbar-list a:hover {
   color: #004d7a;
 }
+
+/* ===== 各 section 标题与文字 ===== */
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin-top: 2.

@@ -12,7 +12,6 @@
   width: 160px;
   height: 160px;
   object-fit: cover;
-  margin-right: 1rem;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
@@ -31,7 +30,8 @@
 
 .header-info .position {
   font-size: 16px;
-  color: #222;
+  color: #111;
+  font-weight: 500;
 }
 
 .header-info .email {
@@ -40,89 +40,16 @@
 }
 
 .header-info .social {
-  font-size: 20px;
-  color: #333;
-}
-
-.header-info .social i {
-  margin-right: 12px;
-  transition: color 0.2s ease;
-}
-
-.header-info .social i:hover {
-  color: #004d7a;
-}
-
-/* ==== Navbar ==== */
-.navbar {
-  text-align: center;
-  padding: 1rem 0;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  background: #fff;
-  font-family: 'Commissioner', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0.04em;
-}
-
-.navbar-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar-list li {
-  display: inline-block;
-  margin: 0 1.5rem;
-}
-
-.navbar-list a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.2s ease;
-}
-
-.navbar-list a:hover {
-  color: #004d7a;
-}
-
-/* ==== Section Titles ==== */
-h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
   font-size: 22px;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  color: #111;
-  border-bottom: none;
+  color: #333;
 }
 
-/* ==== Section Content ==== */
-p, li {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #222;
+.header-info .social a {
+  color: #444;
+  margin-right: 16px;
+  transition: color 0.2s ease;
 }
 
-ul {
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.container {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-  background-color: #fff;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 1.5rem 0;
-  font-size: 0.85rem;
-  color: #777;
-  border-top: 1px solid #eee;
-  margin-top: 3rem;
+.header-info .social a:hover {
+  color: #004d7a; /* 深蓝色悬停效果 */
 }

@@ -1,28 +1,33 @@
 <section class="header">
   <div class="row header-flex">
+    <!-- 左侧头像 -->
     <div class="three columns header-photo">
       <img id="profile-pic" class="u-max-full-width" src="{{ '/assets/profile-pics/photo1.jpg' | relative_url }}" alt="Profile Picture">
     </div>
 
+    <!-- 右侧三行文字 -->
     <div class="nine columns header-info">
       <p class="position">PhD Candidate in Geospatial Data Science, University of Glasgow</p>
       <p class="email">yu.wang [at] glasgow.ac.uk</p>
       <p class="social">
-        <span onclick="window.open('https://www.linkedin.com/in/your-linkedin')" style="cursor:pointer;">
-          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        </span>
-        <span onclick="window.open('https://scholar.google.com/citations?user=YOURID')" style="cursor:pointer;">
-          <i class="ai ai-google-scholar" aria-hidden="true"></i>
-        </span>
-        <span onclick="window.open('https://github.com/ywang-twocities')" style="cursor:pointer;">
-          <i class="fa fa-github" aria-hidden="true"></i>
-        </span>
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" target="_blank" title="LinkedIn">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+        <!-- Google Scholar -->
+        <a href="https://scholar.google.com/citations?user=YOUR-SCHOLAR-ID" target="_blank" title="Google Scholar">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/ywang-twocities" target="_blank" title="GitHub">
+          <i class="fa fa-github"></i>
+        </a>
       </p>
     </div>
   </div>
 </section>
 
-<!-- Navigation -->
+<!-- 导航栏 -->
 <nav class="navbar">
   <ul class="navbar-list">
     <li><a href="/">Home</a></li>

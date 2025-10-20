@@ -1,33 +1,59 @@
-body {
-  font-family: 'Libre Baskerville', serif;
+/* ==== Header Section ==== */
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.header-photo img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  margin-right: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160px; /* 与头像等高 */
+  padding-left: 1rem;
+}
+
+.header-info p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.header-info .position {
+  font-size: 16px;
   color: #222;
-  background-color: #fafafa;
-  line-height: 1.7;
 }
 
-.container {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-  background-color: #fff;
+.header-info .email {
+  font-size: 16px;
+  color: #555;
 }
 
-h1, h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
-  color: #111;
+.header-info .social {
+  font-size: 20px;
+  color: #333;
 }
 
-a {
+.header-info .social i {
+  margin-right: 12px;
+  transition: color 0.2s ease;
+}
+
+.header-info .social i:hover {
   color: #004d7a;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,77,122,0.2);
 }
 
-a:hover {
-  color: #002f49;
-  border-bottom-color: #002f49;
-}
-
+/* ==== Navbar ==== */
 .navbar {
   text-align: center;
   padding: 1rem 0;
@@ -39,15 +65,59 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
-.navbar a {
-  margin: 0 1rem;
-  color: #333;
+.navbar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar a:hover {
+.navbar-list li {
+  display: inline-block;
+  margin: 0 1.5rem;
+}
+
+.navbar-list a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.navbar-list a:hover {
   color: #004d7a;
 }
 
+/* ==== Section Titles ==== */
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #111;
+  border-bottom: none;
+}
+
+/* ==== Section Content ==== */
+p, li {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  background-color: #fff;
+}
+
+/* Footer */
 .footer {
   text-align: center;
   padding: 1.5rem 0;
@@ -55,12 +125,4 @@ a:hover {
   color: #777;
   border-top: 1px solid #eee;
   margin-top: 3rem;
-}
-
-img.u-max-full-width {
-  border-radius: 50%;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
 }

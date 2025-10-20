@@ -123,16 +123,35 @@ body {
   color: #004d7a;
 }
 
-/* ===== Section 样式（标题与分割线） ===== */
+
+/* ===== Section 样式（标题与分隔线） ===== */
+
+/* 所有 section 默认底部分隔线去掉 */
 section {
   padding: 2rem 0;
-  border-bottom: 1px solid #ddd; /* 各 section 间的分割线 */
+  border: none;
 }
 
+/* 除第一个 section（Bio）外，其余 section 顶部分隔线 */
+section:not(:first-of-type) {
+  border-top: 1px solid #ddd; /* 在标题上方画横线 */
+  padding-top: 2.5rem;        /* 保证与上段落距离协调 */
+  margin-top: 2.5rem;         /* 与上文保持呼吸空间 */
+}
+
+/* Bio 部分单独定义（无上方线） */
+section:first-of-type {
+  padding-top: 2rem;
+  margin-top: 0;
+  border-top: none;
+}
+
+/* section 最后一部分（CV）底部不要线 */
 section:last-of-type {
-  border-bottom: none; /* 最后一块（CV）不加底线 */
+  border-bottom: none;
 }
 
+/* 标题样式 */
 h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
@@ -140,8 +159,8 @@ h3 {
   color: #111;
   margin-top: 0;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #ddd; /* 标题自身下方细线 */
-  padding-bottom: 0.5rem;
+  border: none;              /* 去掉标题下方线 */
+  padding-bottom: 0;         /* 去掉多余间距 */
 }
 
 /* ===== 正文段落与列表 ===== */

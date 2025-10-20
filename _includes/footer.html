@@ -1,4 +1,13 @@
-<footer>
-  <p>© {{ site.time | date: "%Y" }} {{ site.author.name }} | 
-     <a href="mailto:{{ site.author.email }}">Contact</a></p>
-</footer>
+<div class="footer">
+  <div class="row">
+    <div class="four columns">
+      {{ site.author.name }}
+    </div>
+    <div class="four columns">
+      {{ site.author.email }}
+    </div>
+    <div class="four columns" style="text-align:right;">
+      <span style="font-size:0.9rem;color:#666;">© {{ site.time | date: "%Y" }} {{ site.title }}</span>
+    </div>
+  </div>
+</div>

@@ -1,33 +1,13 @@
-/* ===== Base ===== */
-body {
-  font-family: 'Libre Baskerville', serif;
-  color: #222;
-  background-color: #fafafa;
-  line-height: 1.7;
-  margin: 0;
-}
-
-/* 统一版心：让所有内容居中 */
-.page {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-  background: #fff;
-}
-
-/* 主体内容区（可按需加阴影或留白） */
-.content {
-  margin-top: 1.5rem;
-}
-
-/* ===== Header：头像 + 三行信息 ===== */
+/* ===== Header Section ===== */
 .header-flex {
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
+  align-items: flex-start; /* 顶部对齐 */
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
+/* 左侧头像 */
 .header-photo img {
   width: 160px;
   height: 160px;
@@ -36,45 +16,58 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
+/* 右侧信息 */
 .header-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 160px;        /* 与头像等高 */
+  height: 160px;   /* 与头像等高 */
 }
 
 .header-info p {
-  margin: 0;            /* 三行之间无多余空隙 */
+  margin: 0;
   line-height: 1.5;
 }
 
+/* 各行文字样式 */
+.header-info .name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+}
+
 .header-info .position {
+  font-family: 'Libre Baskerville', serif;
   font-size: 16px;
   color: #111;
-  font-weight: 500;
 }
 
 .header-info .email {
+  font-family: 'Libre Baskerville', serif;
   font-size: 16px;
   color: #555;
 }
 
 .header-info .social {
-  font-size: 22px;      /* 图标大小 */
+  font-family: 'Commissioner', sans-serif;
+  font-size: 15px;
 }
 
 .header-info .social a {
-  color: #444;
-  margin-right: 16px;
+  margin-right: 18px;
   text-decoration: none;
-  transition: color .2s ease;
+  color: #004d7a;
+  border-bottom: 1px solid rgba(0,77,122,0.25);
+  transition: color .2s ease, border-color .2s ease;
 }
 
 .header-info .social a:hover {
-  color: #004d7a;
+  color: #002f49;
+  border-bottom-color: #002f49;
 }
 
-/* ===== Navbar：均匀排列 + 无 bullet + 上下浅灰线 ===== */
+/* ===== Navbar (保持居中 + 无bullet) ===== */
 .navbar {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -86,19 +79,17 @@ body {
 }
 
 .navbar-list {
-  /* 移除浏览器与框架默认样式，防止 bullet 出现 */
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
-
   display: flex;
-  justify-content: center;     /* 水平居中 */
-  gap: 2rem;                   /* 均匀间距 */
+  justify-content: center;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .navbar-list li {
-  list-style: none !important; /* 再保险：对 li 也移除 bullet */
+  list-style: none !important;
   margin: 0;
   padding: 0;
 }
@@ -111,55 +102,4 @@ body {
 
 .navbar-list a:hover {
   color: #004d7a;
-}
-
-/* ===== Typography：与 Haoyu 保持一致的层级 ===== */
-h1, h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
-  color: #111;
-  margin-top: 2.2rem;
-  margin-bottom: 1rem;
-}
-
-/* section 标题（Bio/Projects/Publications/CV）：22px、加粗、独占一行 */
-h3 {
-  font-weight: 600;
-  font-size: 22px;
-}
-
-/* 正文与列表 */
-p, li {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #222;
-}
-
-/* 链接：深蓝色，细下划线 */
-a {
-  color: #004d7a;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,77,122,.25);
-  transition: color .2s ease, border-color .2s ease;
-}
-a:hover {
-  color: #002f49;
-  border-bottom-color: #002f49;
-}
-
-/* ===== Footer ===== */
-.footer {
-  text-align: center;
-  padding: 1.5rem 0;
-  font-size: .85rem;
-  color: #777;
-  border-top: 1px solid #eee;
-  margin-top: 3rem;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 640px) {
-  .page { margin: 2rem auto; }
-  .header-flex { flex-direction: column; align-items: flex-start; }
-  .header-info { height: auto; gap: .5rem; }
 }

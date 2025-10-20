@@ -1,8 +1,8 @@
-/* ===== 基础与全局居中 ===== */
+/* ===== 全局与基础排版 ===== */
 body {
   font-family: 'Libre Baskerville', serif;
   color: #222;
-  background-color: #fafafa;
+  background-color: #ffffff; /* 整页纯白 */
   line-height: 1.7;
   margin: 0;
 }
@@ -11,10 +11,10 @@ body {
   max-width: 900px;
   margin: 3rem auto;
   padding: 0 1.5rem;
-  background: #fff;
+  background: #fff; /* 内容与背景一致，形成干净整体 */
 }
 
-/* ===== Header 部分 ===== */
+/* ===== Header ===== */
 .header-flex {
   display: flex;
   align-items: flex-start;   /* 顶部对齐 */
@@ -35,7 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 160px; /* 与头像等高 */
+  height: 160px;
 }
 
 .header-info p {
@@ -43,23 +43,22 @@ body {
   line-height: 1.5;
 }
 
-/* ==== 四行信息样式 ==== */
 .header-info .name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 600;
   color: #111;
 }
 
 .header-info .position {
   font-family: 'Libre Baskerville', serif;
-  font-size: 14px;
-  color: #555;
+  font-size: 16px;
+  color: #111;
 }
 
 .header-info .email {
   font-family: 'Libre Baskerville', serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
 }
 
@@ -81,17 +80,17 @@ body {
   border-bottom-color: #002f49;
 }
 
-/* ===== 导航栏居中、无 bullet ===== */
+/* ===== 导航栏（居中、分隔线） ===== */
 .navbar {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
   padding: 1rem 0;
   background: #fff;
   width: 100%;
 }
 
 .navbar-inner {
-  max-width: 900px; /* 与主体内容一致 */
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -101,15 +100,14 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   display: flex;
-  justify-content: center; /* 居中 */
+  justify-content: center;
   align-items: center;
-  gap: 2rem; /* 等距 */
+  gap: 2rem;
 }
 
 .navbar-list li {
   margin: 0;
   padding: 0;
-  list-style: none !important;
 }
 
 .navbar-list a {
@@ -125,9 +123,66 @@ body {
   color: #004d7a;
 }
 
-/* ===== 各 section 标题与文字 ===== */
+/* ===== Section 样式（标题与分割线） ===== */
+section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #ddd; /* 各 section 间的分割线 */
+}
+
+section:last-of-type {
+  border-bottom: none; /* 最后一块（CV）不加底线 */
+}
+
 h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
   font-size: 22px;
-  margin-top: 2.
+  color: #111;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd; /* 标题自身下方细线 */
+  padding-bottom: 0.5rem;
+}
+
+/* ===== 正文段落与列表 ===== */
+p, li {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
+}
+
+ul {
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===== 页脚 ===== */
+.footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 3rem;
+}
+
+/* ===== 响应式优化 ===== */
+@media (max-width: 640px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header-info {
+    height: auto;
+    gap: .5rem;
+  }
+  .navbar-list {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}

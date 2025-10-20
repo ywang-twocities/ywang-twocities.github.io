@@ -1,3 +1,7 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: "Yu Wang"
+description: "Research in Geospatial AI and Data Ethics"
+theme: minima
+url: "https://ywang-twocities.github.io/"
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

@@ -1,7 +1,22 @@
 title: "Yu Wang"
-description: "Research in Geospatial AI and Data Ethics"
-theme: minima
-url: "https://ywang-twocities.github.io/"
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+description: "PhD Candidate in Geospatial Data Science | University of Glasgow"
+url: "https://ywang-twocities.github.io"
+theme: null  # 我们自己定义模板
+markdown: kramdown
+
+# 导航栏配置
+nav:
+  - name: "Home"
+    link: /
+  - name: "Publications"
+    link: /publications
+  - name: "Projects"
+    link: /projects
+  - name: "CV"
+    link: /cv
+
+# 其他参数
+author:
+  name: "Yu Wang"
+  email: "yu.wang@glasgow.ac.uk"
+  github: "ywang-twocities"

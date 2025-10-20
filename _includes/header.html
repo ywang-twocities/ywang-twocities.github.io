@@ -1,35 +1,34 @@
 <section class="header">
-  <div class="row">
-    <div class="three columns">
-      <a href="/">
-        <img id="profile-pic" class="u-max-full-width" src="{{ '/assets/profile-pics/photo1.jpg' | relative_url }}" alt="Profile Picture">
-      </a>
+  <div class="row header-flex">
+    <div class="three columns header-photo">
+      <img id="profile-pic" class="u-max-full-width" src="{{ '/assets/profile-pics/photo1.jpg' | relative_url }}" alt="Profile Picture">
     </div>
-    <div class="nine columns main-description">
-      <h1 style="font-weight:400; font-size:30px; margin-bottom:6px;">YU WANG</h1>
-      <p style="font-size:16px;">PhD Candidate in Geospatial Data Science, University of Glasgow</p>
-      <p style="font-size:16px;margin-bottom:3px;">yu.wang [at] glasgow.ac.uk</p>
-      <p>
+
+    <div class="nine columns header-info">
+      <p class="position">PhD Candidate in Geospatial Data Science, University of Glasgow</p>
+      <p class="email">yu.wang [at] glasgow.ac.uk</p>
+      <p class="social">
+        <span onclick="window.open('https://www.linkedin.com/in/your-linkedin')" style="cursor:pointer;">
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </span>
+        <span onclick="window.open('https://scholar.google.com/citations?user=YOURID')" style="cursor:pointer;">
+          <i class="ai ai-google-scholar" aria-hidden="true"></i>
+        </span>
         <span onclick="window.open('https://github.com/ywang-twocities')" style="cursor:pointer;">
           <i class="fa fa-github" aria-hidden="true"></i>
-        </span>
-        <span onclick="window.open('https://www.linkedin.com/')" style="cursor:pointer;">
-          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
         </span>
       </p>
     </div>
   </div>
 </section>
 
-<div class="navbar-spacer"></div>
+<!-- Navigation -->
 <nav class="navbar">
-  <div class="container">
-    <ul class="navbar-list">
-      <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#bio">Bio</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#projects">Projects</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#publications">Publications</a></li>
-      <li class="navbar-item"><a class="navbar-link" href="#cv">CV</a></li>
-    </ul>
-  </div>
+  <ul class="navbar-list">
+    <li><a href="/">Home</a></li>
+    <li><a href="#bio">Bio</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#cv">CV</a></li>
+  </ul>
 </nav>

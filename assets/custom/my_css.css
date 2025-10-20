@@ -46,20 +46,20 @@ body {
 /* ==== 四行信息样式 ==== */
 .header-info .name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
+  font-size: 14px;
   font-weight: 600;
   color: #111;
 }
 
 .header-info .position {
   font-family: 'Libre Baskerville', serif;
-  font-size: 16px;
-  color: #111;
+  font-size: 14px;
+  color: #555;
 }
 
 .header-info .email {
   font-family: 'Libre Baskerville', serif;
-  font-size: 16px;
+  font-size: 14px;
   color: #555;
 }
 

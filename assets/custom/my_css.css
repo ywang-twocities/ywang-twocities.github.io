@@ -1,17 +1,17 @@
 /* ===== 全局与基础排版 ===== */
 body {
-  font-size: 1.5rem;            /* 字号略大，阅读舒适 */
-  line-height: 1.7;             /* 行距 */
-  font-weight: 200;             /* 细体（轻盈感） */
-  letter-spacing: 0rem;         /* 正常字距 */
-  font-family: "Optima", 'Linux Biolinum', "Roboto Slab",
-               "Open Sans", "Helvetica Neue", "Palatino",
-               "Microsoft Yahei", Helvetica, "Raleway",
+  font-size: 1.5rem;
+  line-height: 1.7;
+  font-weight: 200;
+  letter-spacing: 0rem;
+  font-family: "Optima", "Roboto Slab", "Open Sans", "Helvetica Neue",
+               "Palatino", "Microsoft Yahei", Helvetica, "Raleway",
                -apple-system, "Commissioner";
-  color: #2f2f2f;               /* 柔和深灰色 */
-  background-color: #ffffff;    /* 整页纯白 */
+  color: #2f2f2f;
+  background-color: #ffffff;
   margin: 0;
 }
+
 
 .page {
   max-width: 900px;

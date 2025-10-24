@@ -196,3 +196,19 @@ li {
     gap: 1rem;
   }
 }
+
+/* ====== 分割线：Bio / Publications / Vitæ 之间一条线 ====== */
+
+/* 只在 #bio 和 #publications、#publications 和 #cv 之间画线 */
+#bio + #publications,
+#publications + #cv {
+  border-top: 1px solid #ddd;    /* 灰色细线，与导航栏一致 */
+  padding-top: 2.5rem;           /* 上部留空 */
+  margin-top: 2.5rem;
+}
+
+/* 让三个区块整体呼吸更自然 */
+#bio, #publications, #cv {
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+}

@@ -1,177 +1,277 @@
-/* ===== 全局与基础排版 ===== */
+html {
+  font-size: 14px; /* 将 1rem 从16px改为14px，1.5rem≈21px，与原网页一致 */
+}
+/* =========================================================
+   全局排版与版心设置（Global & Layout）
+   ---------------------------------------------------------
+   - 全站正文的字体、字号、行距、字重、颜色等基础视觉
+   - 版心宽度、居中与左右内边距
+   ========================================================= */
+
+/* 全站正文排版：字号、行距、字体栈、颜色等 */
 body {
-  font-size: 1.5rem;
-  line-height: 1.7;
-  font-weight: 200;
-  letter-spacing: 0rem;
+  font-size: 1.5rem;             /* 基于根字体大小的相对单位；默认 1rem≈16px，这里 1.5rem≈24px */
+  line-height: 1.7;              /* 行高，提升可读性 */
+  font-weight: 200;              /* 字重较轻，带来“轻盈”的视觉感受 */
+  letter-spacing: 0rem;          /* 字符间距：保持默认，不做额外拉伸 */
   font-family: "Optima", "Roboto Slab", "Open Sans", "Helvetica Neue",
                "Palatino", "Microsoft Yahei", Helvetica, "Raleway",
-               -apple-system, "Commissioner";
-  color: #2f2f2f;
-  background-color: #ffffff;
-  margin: 0;
+               -apple-system, "Commissioner";  /* 字体回退栈：优先 Optima；跨平台回退到常见 Web 字体 */
+  color: #2f2f2f;                /* 正文字色：柔和深灰，弱化对比、提升阅读舒适度 */
+  background-color: #ffffff;     /* 页面背景：纯白 */
+  margin: 0;                     /* 去除浏览器默认外边距，避免出现白边 */
 }
 
-
+/* 版心容器：限制内容最大宽度，居中并留出左右内边距 */
 .page {
-  max-width: 760px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-  background: #fff;
+  max-width: 760px;              /* 版心宽度（阅读友好，控制行长） */
+  margin: 3rem auto;             /* 垂直外边距 3rem，水平 auto 居中 */
+  padding: 0 1.5rem;             /* 左右内边距，防止文字贴边 */
+  background: #fff;              /* 版心背景：白色（与 body 一致） */
 }
 
-/* ===== Header ===== */
+
+/* =========================================================
+   Header（头像 + 基本信息 + 社交链接）
+   ---------------------------------------------------------
+   - 左侧头像 + 右侧个人信息的横向布局
+   - 姓名/职位/邮箱/社交链接的字体与样式
+   ========================================================= */
+
+/* Header 主容器：横向排列头像与信息 */
 .header-flex {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  display: flex;                 /* 使用弹性布局进行横向排列 */
+  align-items: flex-start;       /* 顶部对齐，使头像与文字顶端对齐 */
+  justify-content: flex-start;   /* 从左到右自然排布 */
+  gap: 1.5rem;                   /* 头像与信息之间的水平间距 */
+  margin-bottom: 1.5rem;         /* Header 与下方内容的分隔空间 */
 }
 
+/* 头像图片样式：尺寸、圆形化与轻阴影 */
 .header-photo img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  width: 160px;                  /* 头像宽度 */
+  height: 160px;                 /* 头像高度（与宽相同以形成正方形） */
+  border-radius: 50%;            /* 圆形头像 */
+  object-fit: cover;             /* 填充裁切，避免变形 */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1); /* 轻微阴影，突出头像 */
 }
 
+/* 右侧信息容器：纵向分布姓名/职位/邮箱/社交 */
 .header-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 160px;
+  display: flex;                 /* 弹性布局 */
+  flex-direction: column;        /* 垂直排列各信息行 */
+  justify-content: space-between;/* 顶部与底部对齐，均匀分布 */
+  height: 160px;                 /* 与头像高度一致，视觉对齐 */
 }
 
-.header-info p { margin: 0; line-height: 1.5; }
+/* 右侧信息的段落基准：去默认外边距，稍紧凑 */
+.header-info p {
+  margin: 0;                     /* 清除默认段落外边距 */
+  line-height: 1.5;              /* 略紧的行距（与正文区分） */
+}
 
+/* 姓名样式：使用优雅衬线字体，强调身份 */
 .header-info .name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: #111;
+  font-family: 'Cormorant Garamond', serif; /* 标题感更强的衬线字体 */
+  font-size: 14px;               /* 姓名字号（按你的当前值保持不变） */
+  font-weight: 600;              /* 半粗，增强强调 */
+  color: #111;                   /* 更深一档的黑灰 */
 }
 
+/* 职位与邮箱：与正文相同体系的衬线字体 */
 .header-info .position,
 .header-info .email {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 14px;
-  color: #111;
+  font-family: 'Libre Baskerville', serif; /* 学术气质的衬线字体 */
+  font-size: 14px;               /* 与 name 保持统一的字号 */
+  color: #111;                   /* 深色文字 */
 }
 
-.header-info .email { color: #555; }
+/* 邮箱颜色略淡，弱化优先级 */
+.header-info .email {
+  color: #555;                   /* 次级文字色 */
+}
 
+/* 社交链接容器：无衬线字体，弱化与正文的竞争 */
 .header-info .social {
-  font-family: 'Commissioner', sans-serif;
-  font-size: 15px;
+  font-family: 'Commissioner', sans-serif; /* 清爽的无衬线字体 */
+  font-size: 15px;               /* 略大于 14px，增强可点性 */
 }
 
+/* 社交链接：下划线用底边框模拟，悬停有色彩过渡 */
 .header-info .social a {
-  margin-right: 18px;
-  text-decoration: none;
-  color: #004d7a;
-  border-bottom: 1px solid rgba(0,77,122,0.25);
-  transition: color .2s ease, border-color .2s ease;
+  margin-right: 18px;            /* 各链接之间的水平间距 */
+  text-decoration: none;         /* 去默认下划线 */
+  color: #004d7a;                /* 链接主色（深蓝） */
+  border-bottom: 1px solid rgba(0,77,122,0.25); /* 细底边，模拟下划线 */
+  transition: color .2s ease, border-color .2s ease; /* 悬停过渡动画 */
 }
 
+/* 悬停态：更深的蓝色并强化底边颜色 */
 .header-info .social a:hover {
   color: #002f49;
   border-bottom-color: #002f49;
 }
 
-/* ===== 导航栏 ===== */
+
+/* =========================================================
+   顶部导航（Navbar）
+   ---------------------------------------------------------
+   - 顶部与底部细线分隔
+   - 导航项水平居中排列与悬停样式
+   ========================================================= */
+
+/* 导航条外层：上下边框细线，形成与内容的分隔 */
 .navbar {
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-  padding: 1rem 0;
-  background: #fff;
-  width: 100%;
+  border-top: 1px solid #e5e5e5; /* 顶部分隔线（浅灰） */
+  border-bottom: 1px solid #e5e5e5; /* 底部分隔线（浅灰） */
+  padding: 1rem 0;               /* 导航条上下内边距 */
+  background: #fff;              /* 导航背景：白 */
+  width: 100%;                   /* 占满可视宽度 */
 }
 
+/* 导航内层容器：与版心宽度对齐，并内容居中 */
 .navbar-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 760px;              /* 与 .page 相同宽度，视觉对齐 */
+  margin: 0 auto;                /* 水平居中 */
+  text-align: center;            /* 文本居中（备用） */
 }
 
+/* 导航列表：去默认样式，启用横向弹性布局，居中排列 */
 .navbar-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  list-style: none;              /* 去掉列表符号 */
+  margin: 0;                     /* 去掉默认外边距 */
+  padding: 0;                    /* 去掉默认内边距 */
+  display: flex;                 /* 横向排列各导航项 */
+  justify-content: center;       /* 居中对齐 */
+  align-items: center;           /* 垂直居中 */
+  gap: 2rem;                     /* 导航项之间的间距 */
 }
 
+/* 导航链接样式：无衬线、轻字距、悬停变色 */
 .navbar-list a {
-  font-family: 'Commissioner', sans-serif;
-  font-size: 15px;
-  color: #333;
-  text-decoration: none;
-  letter-spacing: 0.03em;
-  transition: color 0.2s ease;
+  font-family: 'Commissioner', sans-serif; /* 清晰的无衬线字体 */
+  font-size: 15px;               /* 导航字号 */
+  color: #333;                   /* 默认深灰色文字 */
+  text-decoration: none;         /* 去默认下划线 */
+  letter-spacing: 0.03em;        /* 轻微增加字距，提高可读性 */
+  transition: color 0.2s ease;   /* 悬停颜色过渡 */
 }
 
-.navbar-list a:hover { color: #004d7a; }
+/* 悬停态：主色调蓝色 */
+.navbar-list a:hover {
+  color: #004d7a;
+}
 
-/* ===== 内容区块分隔线 ===== */
+
+/* =========================================================
+   内容区块分隔线（Bio / Publications / CV）
+   ---------------------------------------------------------
+   - 仅在区块之间绘制“一条”分隔线，避免双线
+   - 调整上下内外边距，保证视觉节奏
+   ========================================================= */
+
+/* 在 Bio→Publications、Publications→CV 之间绘制上边框作为分隔线 */
 #bio + #publications,
 #publications + #cv {
-  border-top: 1px solid #ddd;
-  padding-top: 2.5rem;
-  margin-top: 2.5rem;
+  border-top: 1px solid #ddd;    /* 分隔线：浅灰 */
+  padding-top: 2.5rem;           /* 分隔线下的上内边距，拉开与标题的距离 */
+  margin-top: 2.5rem;            /* 与上一块的外间距，避免拥挤 */
 }
 
+/* 三个区块自身的下方留白，形成“呼吸感” */
 #bio, #publications, #cv {
-  padding-bottom: 2.5rem;
-  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;        /* 底部内边距 */
+  margin-bottom: 2.5rem;         /* 底部外边距 */
 }
 
-/* ===== 标题 ===== */
+
+/* =========================================================
+   通用标题样式（h3）
+   ---------------------------------------------------------
+   - 统一各模块标题的字体、字号、颜色与外边距
+   ========================================================= */
+
 h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 600;
-  font-size: 22px;
-  color: #111;
-  margin-top: 0;
-  margin-bottom: 1rem;
+  font-family: 'Cormorant Garamond', serif; /* 优雅的衬线标题字体 */
+  font-weight: 600;              /* 半粗，突出层级 */
+  font-size: 22px;               /* 标题字号 */
+  color: #111;                   /* 更深的黑灰以强调 */
+  margin-top: 0;                 /* 去掉标题顶部默认外边距 */
+  margin-bottom: 1rem;           /* 标题与正文间距 */
 }
 
-/* ===== 段落与列表 ===== */
-p, li { font: inherit; color: inherit; }
 
-ul { margin: 0 0 1rem 1.2rem; padding: 0; }
-li { margin-bottom: 0.5rem; }
+/* =========================================================
+   正文段落与列表（Paragraph & List）
+   ---------------------------------------------------------
+   - 继承 body 的排版设置，统一视觉
+   - 列表外边距与行间距
+   ========================================================= */
 
-/* ===== 页脚 ===== */
+/* 段落与列表项：完全继承 body 的字体/字号/行距/颜色 */
+p, li {
+  font: inherit;                 /* 同时继承 family/size/weight/line-height */
+  color: inherit;                /* 继承文字颜色 */
+}
+
+/* 无序列表：左缩进与底部间距 */
+ul {
+  margin: 0 0 1rem 1.2rem;       /* 上右下左：左侧缩进 1.2rem，底部留白 1rem */
+  padding: 0;                    /* 去除默认内边距 */
+}
+
+/* 列表项：列表项之间的垂直间距 */
+li {
+  margin-bottom: 0.5rem;         /* 列表项之间的行间距 */
+}
+
+
+/* =========================================================
+   页脚（Footer）
+   ---------------------------------------------------------
+   - 细分隔线、居中与辅助信息的弱化显示
+   ========================================================= */
+
 .footer {
-  text-align: center;
-  padding: 1.5rem 0;
-  font-size: 0.85rem;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-  margin-top: 3rem;
+  text-align: center;            /* 页脚内容居中 */
+  padding: 1.5rem 0;             /* 上下内边距 */
+  font-size: 0.85rem;            /* 较小字号，弱化视觉权重 */
+  color: #777;                   /* 次级文字色 */
+  border-top: 1px solid #e5e5e5; /* 顶部分隔线 */
+  margin-top: 3rem;              /* 与主体内容的距离 */
 }
 
-/* ===== 响应式优化 ===== */
+
+/* =========================================================
+   响应式优化（Mobile）
+   ---------------------------------------------------------
+   - 小屏幕下 Header 改为纵向排列
+   - 导航条支持换行，避免溢出
+   ========================================================= */
+
 @media (max-width: 640px) {
   .header-flex {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column;      /* 头像与信息改为上下排列 */
+    align-items: flex-start;     /* 左对齐 */
   }
   .header-info {
-    height: auto;
-    gap: .5rem;
+    height: auto;                /* 高度自适应内容 */
+    gap: .5rem;                  /* 信息行之间的垂直间距 */
   }
   .navbar-list {
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-wrap: wrap;             /* 导航项换行，避免拥挤 */
+    gap: 1rem;                   /* 移动端减小间距 */
   }
 }
 
-/* ===== 中文字体适配 ===== */
+
+/* =========================================================
+   中文字体适配（Chinese Locale）
+   ---------------------------------------------------------
+   - 在 html 标记语言为中文时，优先使用更适配中文的字体
+   - 避免中英混排时的字体跳变与高度不一致
+   ========================================================= */
+
 html:lang(zh) body {
   font-family: "Microsoft Yahei", "Optima", "Roboto Slab",
                "Open Sans", "Helvetica Neue", "Palatino",

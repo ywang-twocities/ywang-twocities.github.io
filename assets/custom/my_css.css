@@ -212,3 +212,29 @@ li {
   padding-bottom: 2.5rem;
   margin-bottom: 2.5rem;
 }
+
+/* ===== 正文整体排版样式（模仿 Umang Bhatt 的配置） ===== */
+body {
+  font-size: 1.5rem;            /* 字号略大，阅读舒适 */
+  line-height: 1.7;             /* 行距 */
+  font-weight: 200;             /* 细体（轻盈感） */
+  letter-spacing: 0rem;         /* 正常字距 */
+  font-family: "Optima", 'Linux Biolinum', "Roboto Slab",
+               "Open Sans", "Helvetica Neue", "Palatino",
+               "Microsoft Yahei", Helvetica, "Raleway",
+               -apple-system, "Commissioner";
+  color: #2f2f2f;               /* 柔和深灰色 */
+}
+
+/* 段落与列表继承正文样式 */
+p, li {
+  font: inherit;
+  color: inherit;
+}
+
+/* 适配中文显示时的平衡字体（防止中英文跳字体） */
+html:lang(zh) body {
+  font-family: "Microsoft Yahei", "Optima", "Roboto Slab",
+               "Open Sans", "Helvetica Neue", "Palatino",
+               Helvetica, "Raleway", -apple-system, "Commissioner", serif;
+}

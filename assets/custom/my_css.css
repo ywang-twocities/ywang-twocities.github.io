@@ -1,9 +1,15 @@
 /* ===== 全局与基础排版 ===== */
 body {
-  font-family: 'Libre Baskerville', serif;
-  color: #222;
-  background-color: #ffffff; /* 整页纯白 */
-  line-height: 1.7;
+  font-size: 1.5rem;            /* 字号略大，阅读舒适 */
+  line-height: 1.7;             /* 行距 */
+  font-weight: 200;             /* 细体（轻盈感） */
+  letter-spacing: 0rem;         /* 正常字距 */
+  font-family: "Optima", 'Linux Biolinum', "Roboto Slab",
+               "Open Sans", "Helvetica Neue", "Palatino",
+               "Microsoft Yahei", Helvetica, "Raleway",
+               -apple-system, "Commissioner";
+  color: #2f2f2f;               /* 柔和深灰色 */
+  background-color: #ffffff;    /* 整页纯白 */
   margin: 0;
 }
 
@@ -11,13 +17,13 @@ body {
   max-width: 900px;
   margin: 3rem auto;
   padding: 0 1.5rem;
-  background: #fff; /* 内容与背景一致，形成干净整体 */
+  background: #fff;
 }
 
 /* ===== Header ===== */
 .header-flex {
   display: flex;
-  align-items: flex-start;   /* 顶部对齐 */
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
@@ -38,10 +44,7 @@ body {
   height: 160px;
 }
 
-.header-info p {
-  margin: 0;
-  line-height: 1.5;
-}
+.header-info p { margin: 0; line-height: 1.5; }
 
 .header-info .name {
   font-family: 'Cormorant Garamond', serif;
@@ -50,17 +53,14 @@ body {
   color: #111;
 }
 
-.header-info .position {
+.header-info .position,
+.header-info .email {
   font-family: 'Libre Baskerville', serif;
   font-size: 16px;
   color: #111;
 }
 
-.header-info .email {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 16px;
-  color: #555;
-}
+.header-info .email { color: #555; }
 
 .header-info .social {
   font-family: 'Commissioner', sans-serif;
@@ -80,7 +80,7 @@ body {
   border-bottom-color: #002f49;
 }
 
-/* ===== 导航栏（居中、分隔线） ===== */
+/* ===== 导航栏 ===== */
 .navbar {
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
@@ -96,18 +96,13 @@ body {
 }
 
 .navbar-list {
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-}
-
-.navbar-list li {
-  margin: 0;
-  padding: 0;
 }
 
 .navbar-list a {
@@ -119,30 +114,22 @@ body {
   transition: color 0.2s ease;
 }
 
-.navbar-list a:hover {
-  color: #004d7a;
+.navbar-list a:hover { color: #004d7a; }
+
+/* ===== 内容区块分隔线 ===== */
+#bio + #publications,
+#publications + #cv {
+  border-top: 1px solid #ddd;
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
 }
 
-
-/* ===== Section 样式（标题与分隔线） ===== */
-
-/* 默认：每个 section 上下留空，但不画线 */
-section {
-  padding: 2rem 0;
-  margin: 2.5rem 0;
-  border: none;
+#bio, #publications, #cv {
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
-/* 仅在每个 section 的顶部画线（除了第一个） */
-section + section {
-  border-top: 1px solid #ddd; /* 每个 section 之间只会出现一条线 */
-}
-
-/* 保证最后一块下面不画线 */
-section:last-of-type {
-  border-bottom: none;
-}
-/* 标题样式 */
+/* ===== 标题 ===== */
 h3 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 600;
@@ -150,26 +137,13 @@ h3 {
   color: #111;
   margin-top: 0;
   margin-bottom: 1rem;
-  border: none;              /* 去掉标题下方线 */
-  padding-bottom: 0;         /* 去掉多余间距 */
 }
 
-/* ===== 正文段落与列表 ===== */
-p, li {
-  font-family: 'Libre Baskerville', serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #222;
-}
+/* ===== 段落与列表 ===== */
+p, li { font: inherit; color: inherit; }
 
-ul {
-  margin: 0 0 1rem 1.2rem;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
+ul { margin: 0 0 1rem 1.2rem; padding: 0; }
+li { margin-bottom: 0.5rem; }
 
 /* ===== 页脚 ===== */
 .footer {
@@ -197,42 +171,7 @@ li {
   }
 }
 
-/* ====== 分割线：Bio / Publications / Vitæ 之间一条线 ====== */
-
-/* 只在 #bio 和 #publications、#publications 和 #cv 之间画线 */
-#bio + #publications,
-#publications + #cv {
-  border-top: 1px solid #ddd;    /* 灰色细线，与导航栏一致 */
-  padding-top: 2.5rem;           /* 上部留空 */
-  margin-top: 2.5rem;
-}
-
-/* 让三个区块整体呼吸更自然 */
-#bio, #publications, #cv {
-  padding-bottom: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
-/* ===== 正文整体排版样式（模仿 Umang Bhatt 的配置） ===== */
-body {
-  font-size: 1.5rem;            /* 字号略大，阅读舒适 */
-  line-height: 1.7;             /* 行距 */
-  font-weight: 200;             /* 细体（轻盈感） */
-  letter-spacing: 0rem;         /* 正常字距 */
-  font-family: "Optima", 'Linux Biolinum', "Roboto Slab",
-               "Open Sans", "Helvetica Neue", "Palatino",
-               "Microsoft Yahei", Helvetica, "Raleway",
-               -apple-system, "Commissioner";
-  color: #2f2f2f;               /* 柔和深灰色 */
-}
-
-/* 段落与列表继承正文样式 */
-p, li {
-  font: inherit;
-  color: inherit;
-}
-
-/* 适配中文显示时的平衡字体（防止中英文跳字体） */
+/* ===== 中文字体适配 ===== */
 html:lang(zh) body {
   font-family: "Microsoft Yahei", "Optima", "Roboto Slab",
                "Open Sans", "Helvetica Neue", "Palatino",

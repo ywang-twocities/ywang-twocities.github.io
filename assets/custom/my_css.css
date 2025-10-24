@@ -1,12 +1,12 @@
 /* ===== 全局与基础排版 ===== */
-/* body {
+body {
   font-family: 'Libre Baskerville', serif;
   color: #222;
   background-color: #ffffff; 
   line-height: 1.7;
   margin: 0;
-} */
-body {
+}
+/* body {
   font-size: 1.5rem;            /* 字号 */
   line-height: 1.7;             /* 行距 */
   font-weight: 200;             /* 字重（细体） */
@@ -16,7 +16,7 @@ body {
                "Microsoft Yahei", Helvetica, "Raleway",
                -apple-system, "Commissioner";
   color: #2f2f2f;               /* 字体颜色 */
-}
+} */
 
 
 .page {

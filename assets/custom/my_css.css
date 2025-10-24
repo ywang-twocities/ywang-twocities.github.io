@@ -190,12 +190,14 @@ body {
    ========================================================= */
 
 h3 {
-  font-family: 'Cormorant Garamond', serif; /* 优雅的衬线标题字体 */
-  font-weight: 600;              /* 半粗，突出层级 */
-  font-size: 22px;               /* 标题字号 */
-  color: #111;                   /* 更深的黑灰以强调 */
-  margin-top: 0;                 /* 去掉标题顶部默认外边距 */
-  margin-bottom: 1rem;           /* 标题与正文间距 */
+  font-family: "Optima", "Roboto Slab", "Open Sans", "Helvetica Neue",
+               "Palatino", "Microsoft Yahei", Helvetica, "Raleway",
+               -apple-system, "Commissioner"; /* 与正文一致 */
+  font-weight: 400;        /* 正常字重，不加粗 */
+  font-size: 1.2rem;       /* 比正文稍大即可（≈17~18px） */
+  color: #2f2f2f;          /* 与正文色一致 */
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 

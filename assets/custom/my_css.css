@@ -1,23 +1,11 @@
 /* ===== 全局与基础排版 ===== */
-/* body {
+body {
   font-family: 'Libre Baskerville', serif;
   color: #222;
-  background-color: #ffffff; 
+  background-color: #ffffff; /* 整页纯白 */
   line-height: 1.7;
   margin: 0;
-} */
-body {
-  font-size: 1.5rem;            /* 字号 */
-  line-height: 1.7;             /* 行距 */
-  font-weight: 200;             /* 字重（细体） */
-  letter-spacing: 0rem;         /* 字符间距 */
-  font-family: "Optima", 'Linux Biolinum', "Roboto Slab",
-               "Open Sans", "Helvetica Neue", "Palatino",
-               "Microsoft Yahei", Helvetica, "Raleway",
-               -apple-system, "Commissioner";
-  color: #2f2f2f;               /* 字体颜色 */
-} 
-
+}
 
 .page {
   max-width: 900px;
@@ -135,27 +123,32 @@ body {
   color: #004d7a;
 }
 
+
 /* ===== Section 样式（标题与分隔线） ===== */
 
-/* 重置默认样式，不清除边框 */
+/* 所有 section 默认底部分隔线去掉 */
 section {
   padding: 2rem 0;
-  margin: 3rem 0;
-}
-
-/* Bio、Publications、Vitae 三个区块添加上下横线 */
-#bio, #publications, #vitae {
-  border-top: 1px solid #e5e5e5;     /* 与导航栏一致 */
-  border-bottom: 1px solid #e5e5e5;  /* 下方横线 */
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
-/* 其他 section 若不需要横线，可保持默认 */
-section:not(#bio):not(#publications):not(#vitae) {
   border: none;
+}
+
+/* 除第一个 section（Bio）外，其余 section 顶部分隔线 */
+section:not(:first-of-type) {
+  border-top: 1px solid #ddd; /* 在标题上方画横线 */
+  padding-top: 2.5rem;        /* 保证与上段落距离协调 */
+  margin-top: 2.5rem;         /* 与上文保持呼吸空间 */
+}
+
+/* Bio 部分单独定义（无上方线） */
+section:first-of-type {
+  padding-top: 2rem;
+  margin-top: 0;
+  border-top: none;
+}
+
+/* section 最后一部分（CV）底部不要线 */
+section:last-of-type {
+  border-bottom: none;
 }
 
 /* 标题样式 */
@@ -166,15 +159,16 @@ h3 {
   color: #111;
   margin-top: 0;
   margin-bottom: 1rem;
-  border: none;
-  padding-bottom: 0;
+  border: none;              /* 去掉标题下方线 */
+  padding-bottom: 0;         /* 去掉多余间距 */
 }
-
 
 /* ===== 正文段落与列表 ===== */
 p, li {
-  font: inherit;       /* 同时继承 family/size/weight/line-height */
-  color: inherit;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222;
 }
 
 ul {

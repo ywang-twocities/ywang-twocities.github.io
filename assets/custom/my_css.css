@@ -126,31 +126,22 @@ body {
 
 /* ===== Section 样式（标题与分隔线） ===== */
 
-/* 所有 section 默认底部分隔线去掉 */
+/* 默认：每个 section 上下留空，但不画线 */
 section {
   padding: 2rem 0;
+  margin: 2.5rem 0;
   border: none;
 }
 
-/* 除第一个 section（Bio）外，其余 section 顶部分隔线 */
-section:not(:first-of-type) {
-  border-top: 1px solid #ddd; /* 在标题上方画横线 */
-  padding-top: 2.5rem;        /* 保证与上段落距离协调 */
-  margin-top: 2.5rem;         /* 与上文保持呼吸空间 */
+/* 仅在每个 section 的顶部画线（除了第一个） */
+section + section {
+  border-top: 1px solid #ddd; /* 每个 section 之间只会出现一条线 */
 }
 
-/* Bio 部分单独定义（无上方线） */
-section:first-of-type {
-  padding-top: 2rem;
-  margin-top: 0;
-  border-top: none;
-}
-
-/* section 最后一部分（CV）底部不要线 */
+/* 保证最后一块下面不画线 */
 section:last-of-type {
   border-bottom: none;
 }
-
 /* 标题样式 */
 h3 {
   font-family: 'Cormorant Garamond', serif;

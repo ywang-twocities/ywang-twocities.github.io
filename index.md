@@ -23,6 +23,6 @@ title: Home
 </div>
 
 <div id="cv">
-  <h3>Vitae</h3>
-  <p>Full Curriculum Vitae in <a href="/assets/cv/cv.pdf" target="_blank">pdf</a></p>
+  <h3>Vitæ</h3>
+  <p>Full Curriculum Vitæ in <a href="/assets/cv/cv.pdf" target="_blank">pdf</a></p>
 </div>

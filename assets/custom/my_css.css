@@ -10,7 +10,7 @@
 body {
   font-size: 0.875rem !important;             /* 基于根字体大小的相对单位；默认 1rem≈16px，这里 1.5rem≈24px */
   line-height: 1.7;              /* 行高，提升可读性 */
-  font-weight: 400;              /* 字重较轻，带来“轻盈”的视觉感受 */
+  font-weight: 200;              /* 字重较轻，带来“轻盈”的视觉感受 */
   letter-spacing: 0rem;          /* 字符间距：保持默认，不做额外拉伸 */
   font-family: "Linux Biolinum", "Optima", "Roboto Slab", "Open Sans", "Helvetica Neue",
                "Palatino", "Microsoft Yahei", Helvetica, "Raleway",

@@ -70,8 +70,8 @@ body {
 
 /* 姓名样式：使用优雅衬线字体，强调身份 */
 .header-info .name {
-  font-family: 'Cormorant Garamond', serif; /* 标题感更强的衬线字体 */
-  font-size: 14px;               /* 姓名字号（按你的当前值保持不变） */
+  font-family: 'Linux Biolinum', serif; /* 标题感更强的衬线字体 */
+  font-size: 18px;               /* 姓名字号（按你的当前值保持不变） */
   font-weight: 600;              /* 半粗，增强强调 */
   color: #111;                   /* 更深一档的黑灰 */
 }
@@ -79,7 +79,7 @@ body {
 /* 职位与邮箱：与正文相同体系的衬线字体 */
 .header-info .position,
 .header-info .email {
-  font-family: 'Libre Baskerville', serif; /* 学术气质的衬线字体 */
+  font-family: 'Linux Biolinum', serif; /* 学术气质的衬线字体 */
   font-size: 14px;               /* 与 name 保持统一的字号 */
   color: #111;                   /* 深色文字 */
 }
@@ -92,12 +92,12 @@ body {
 /* 社交链接容器：无衬线字体，弱化与正文的竞争 */
 .header-info .social {
   font-family: 'Commissioner', sans-serif; /* 清爽的无衬线字体 */
-  font-size: 15px;               /* 略大于 14px，增强可点性 */
+  font-size: 14px;               /* 略大于 14px，增强可点性 */
 }
 
 /* 社交链接：下划线用底边框模拟，悬停有色彩过渡 */
 .header-info .social a {
-  margin-right: 18px;            /* 各链接之间的水平间距 */
+  margin-right: 14px;            /* 各链接之间的水平间距 */
   text-decoration: none;         /* 去默认下划线 */
   color: #004d7a;                /* 链接主色（深蓝） */
   border-bottom: 1px solid rgba(0,77,122,0.25); /* 细底边，模拟下划线 */
@@ -190,7 +190,7 @@ body {
    ========================================================= */
 
 h3 {
-  font-family: "Optima", "Roboto Slab", "Open Sans", "Helvetica Neue",
+  font-family: "Linux Biolinum", "Optima", "Roboto Slab", "Open Sans", "Helvetica Neue",
                "Palatino", "Microsoft Yahei", Helvetica, "Raleway",
                -apple-system, "Commissioner"; /* 与正文一致 */
   font-weight: 400;        /* 正常字重，不加粗 */
@@ -273,7 +273,7 @@ li {
    ========================================================= */
 
 html:lang(zh) body {
-  font-family: "Microsoft Yahei", "Optima", "Roboto Slab",
+  font-family: "Microsoft Yahei", "Linux Biolinum", "Optima", "Roboto Slab",
                "Open Sans", "Helvetica Neue", "Palatino",
                Helvetica, "Raleway", -apple-system, "Commissioner", serif;
 }

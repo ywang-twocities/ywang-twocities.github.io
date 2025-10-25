@@ -1,3 +1,28 @@
+/* =========================================================
+   自托管字体加载（Linux Biolinum + Optima）
+   ---------------------------------------------------------
+   - 让网页自动加载字体文件，即使访问者本地没有字体
+   - 注意路径区分大小写，确保文件存在于 /assets/fonts/
+   ========================================================= */
+
+/* Linux Biolinum Regular */
+@font-face {
+  font-family: "Linux Biolinum";
+  src: url("/assets/fonts/LinBiolinum_R.woff2") format("woff2"),
+       url("/assets/fonts/LinBiolinum_r.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Optima Regular */
+@font-face {
+  font-family: "Optima";
+  src: url("/assets/fonts/OPTIMA.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* =========================================================
    全局排版与版心设置（Global & Layout）
@@ -6,19 +31,21 @@
    - 版心宽度、居中与左右内边距
    ========================================================= */
 
+  
 /* 全站正文排版：字号、行距、字体栈、颜色等 */
 body {
-  font-size: 0.875rem !important;             /* 基于根字体大小的相对单位；默认 1rem≈16px，这里 1.5rem≈24px */
-  line-height: 1.7;              /* 行高，提升可读性 */
-  font-weight: 200;              /* 字重较轻，带来“轻盈”的视觉感受 */
-  letter-spacing: 0rem;          /* 字符间距：保持默认，不做额外拉伸 */
-  font-family: "Linux Biolinum", "Optima", "Roboto Slab", "Open Sans", "Helvetica Neue",
-               "Palatino", "Microsoft Yahei", Helvetica, "Raleway",
-               -apple-system, "Commissioner";  /* 字体回退栈：优先 Optima；跨平台回退到常见 Web 字体 */
-  color: #2f2f2f;                /* 正文字色：柔和深灰，弱化对比、提升阅读舒适度 */
-  background-color: #ffffff;     /* 页面背景：纯白 */
-  margin: 0;                     /* 去除浏览器默认外边距，避免出现白边 */
+  font-size: 0.875rem;
+  line-height: 1.7;
+  font-weight: 200;
+  letter-spacing: 0rem;
+  font-family: "Linux Biolinum", "Optima", "Roboto Slab", "Open Sans",
+               "Helvetica Neue", "Palatino", "Microsoft Yahei", Helvetica,
+               "Raleway", -apple-system, "Commissioner";
+  color: #2f2f2f;
+  background-color: #ffffff;
+  margin: 0;
 }
+
 
 /* 版心容器：限制内容最大宽度，居中并留出左右内边距 */
 .page {

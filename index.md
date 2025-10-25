@@ -23,7 +23,7 @@ title: Home
 </div> -->
 <div id="publications">
   <h3>Publications</h3>
-  {% include_relative publications.md %}
+  {{ include_relative publications.md | markdownify }}
 </div>
 
 <div id="cv">

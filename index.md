@@ -17,9 +17,13 @@ title: Home
   </ul>
 </div> -->
 
-<div id="publications">
+<!-- <div id="publications">
   <h3>Publications</h3>
   <p>Coming soon...</p>
+</div> -->
+<div id="publications">
+  <h3>Publications</h3>
+  {% include_relative publications.md %}
 </div>
 
 <div id="cv">

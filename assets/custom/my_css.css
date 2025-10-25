@@ -1,15 +1,13 @@
 /* =========================================================
    自托管字体加载（Linux Biolinum + Optima）
    ---------------------------------------------------------
-   - 让网页自动加载字体文件，即使访问者本地没有字体
-   - 注意路径区分大小写，确保文件存在于 /assets/fonts/
+   只包含现有的两个 .ttf 文件
    ========================================================= */
 
 /* Linux Biolinum Regular */
 @font-face {
   font-family: "Linux Biolinum";
-  src: url("/assets/fonts/LinBiolinum_R.woff2") format("woff2"),
-       url("/assets/fonts/LinBiolinum_r.ttf") format("truetype");
+  src: url("/assets/fonts/LinBiolinum_R.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -18,7 +16,7 @@
 /* Optima Regular */
 @font-face {
   font-family: "Optima";
-  src: url("/assets/fonts/OPTIMA.ttf") format("truetype");
+  src: url("/assets/fonts/OPTIMA.TTF") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

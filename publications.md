@@ -1,7 +1,7 @@
----
+<!-- ---
 layout: default
 title: Publications
----
+--- -->
 
 # Publications
 * **Wang, Y.**, & Basiri, A. (2025). *Bit to brick: from cellular mobile signals to 3D city map creation.*  

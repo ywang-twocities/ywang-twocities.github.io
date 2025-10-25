@@ -12,7 +12,7 @@ body {
   line-height: 1.7;              /* 行高，提升可读性 */
   font-weight: 200;              /* 字重较轻，带来“轻盈”的视觉感受 */
   letter-spacing: 0rem;          /* 字符间距：保持默认，不做额外拉伸 */
-  font-family: "Optima", "Linux Biolinum", "Roboto Slab", "Open Sans", "Helvetica Neue",
+  font-family: "Linux Biolinum", "Optima", "Roboto Slab", "Open Sans", "Helvetica Neue",
                "Palatino", "Microsoft Yahei", Helvetica, "Raleway",
                -apple-system, "Commissioner";  /* 字体回退栈：优先 Optima；跨平台回退到常见 Web 字体 */
   color: #2f2f2f;                /* 正文字色：柔和深灰，弱化对比、提升阅读舒适度 */

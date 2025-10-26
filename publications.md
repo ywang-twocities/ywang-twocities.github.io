@@ -11,4 +11,3 @@
 * **Wang, Y.**, & Basiri, A.  
   *From static to dynamic: evaluating model robustness with historical street view images in cross-view geolocalisation.*  
   *IEEE Access.* (under review).
-

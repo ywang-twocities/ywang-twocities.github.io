@@ -8,3 +8,7 @@ author:
 
 markdown: kramdown
 theme: null
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag

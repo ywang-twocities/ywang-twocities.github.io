@@ -1,0 +1,6 @@
+# Allow all web crawlers full access to your site
+User-agent: *
+Allow: /
+
+# Point search engines to your sitemap
+Sitemap: https://ywang-twocities.github.io/sitemap.xml

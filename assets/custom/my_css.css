@@ -316,7 +316,7 @@ li {
   padding: 1.5rem 0;             /* 上下内边距 */
   font-size: 0.85rem;            /* 较小字号，弱化视觉权重 */
   color: #777;                   /* 次级文字色 */
-  border-top: 1px solid #e5e5e5; /* 顶部分隔线 */
+  border-top: none; /* 顶部分隔线 */
   margin-top: 3rem;              /* 与主体内容的距离 */
 }
 

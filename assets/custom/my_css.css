@@ -222,13 +222,13 @@ body {
    #publications strong {
     text-decoration: underline;
     text-decoration-color: rgba(0, 0, 0, 0.4); /* 半透明灰色线条 */
-    text-decoration-thickness: 0.8px;
+    text-decoration-thickness: 1px;
     text-underline-offset: 3px;
   }
   
    #publications a {
     color: #004d7a;           /* 与站点主色调一致的深蓝 */
-    font-weight: 600;         /* 加粗链接文字 */
+    font-weight: 300;         /* 加粗链接文字 */
     text-decoration: none;    /* 去掉下划线 */
     font-family: "Commissioner", sans-serif; /* 无衬线字体更显粗体 */
     letter-spacing: 0.02em;   /* 稍微放松字距 */

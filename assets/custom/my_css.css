@@ -217,22 +217,27 @@ body {
   margin-bottom: 0.6rem; /* 缩小条目之间的距离 */
 }
 /* =========================================================
-   Publications 链接样式（Link Color for Publications）
-   ---------------------------------------------------------
-   - 自定义论文引用中 [link] 的颜色与悬停状态
+   Publications 链接加粗与配色优化
    ========================================================= */
-
+   #publications strong {
+    font-weight: 700;          /* 加粗提升粗度 */
+    color: #111;               /* 比正文更深 */
+    letter-spacing: 0.01em;    /* 微调字距 */
+  }
    #publications a {
-    color: #004d7a;           /* 默认链接颜色：深蓝，与 header 一致 */
+    color: #004d7a;           /* 与站点主色调一致的深蓝 */
+    font-weight: 600;         /* 加粗链接文字 */
     text-decoration: none;    /* 去掉下划线 */
-    font-size: 0.9em;         /* 稍小一点，弱化视觉存在感 */
-    font-family: 'Commissioner', sans-serif; /* 用无衬线字体更轻巧 */
+    font-family: "Commissioner", sans-serif; /* 无衬线字体更显粗体 */
+    letter-spacing: 0.02em;   /* 稍微放松字距 */
+    transition: color 0.2s ease;
   }
   
   #publications a:hover {
-    color: #a61c1c;           /* 悬停变暗红色（可改成你喜欢的色调） */
-    text-decoration: underline; /* 悬停时出现下划线 */
+    color: #a61c1c;           /* 悬停时更深蓝 */
+    text-decoration: underline;
   }
+
   
 /* =========================================================
    通用标题样式（h3）

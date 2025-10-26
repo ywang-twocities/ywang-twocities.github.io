@@ -228,7 +228,7 @@ body {
   
    #publications a {
     color: #004d7a;           /* 与站点主色调一致的深蓝 */
-    font-weight: 300;         /* 加粗链接文字 */
+    font-weight: 400;         /* 加粗链接文字 */
     text-decoration: none;    /* 去掉下划线 */
     font-family: "Commissioner", sans-serif; /* 无衬线字体更显粗体 */
     letter-spacing: 0.02em;   /* 稍微放松字距 */

@@ -1,5 +1,3 @@
-
-# Publications
 * **Wang, Y.**, & Basiri, A. (2025). *Bit to brick: from cellular mobile signals to 3D city map creation.*  
   *Big Earth Data*, 1–25. DOI: 10.1080/20964471.2025.2561319.
 

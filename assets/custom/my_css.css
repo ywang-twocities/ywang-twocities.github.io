@@ -189,20 +189,31 @@ body {
 /* =========================================================
    Section separators (Bio / Publications / CV)
    ---------------------------------------------------------
-   - symmetric top & bottom spacing
-   - single light-gray border for each block
+   - only draw top border for visual rhythm
+   - symmetric padding, no double lines
    ========================================================= */
+
    #bio, #publications, #cv {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
     margin: 2.5rem 0;       /* 上下外边距对称 */
     padding: 2rem 0;        /* 上下内边距对称 */
+    border-top: 1px solid #ddd;  /* 只画上边线 */
+  }
+  
+  /* 如果你希望最顶部没有线，可以去掉第一个块的顶部线 */
+  #bio {
+    border-top: none;
+  }
+  
+  /* 最后一个块（CV）下方可以加一条线以收尾 */
+  #cv {
+    border-bottom: 1px solid #ddd;
   }
   
   #bio h3, #publications h3, #cv h3 {
     margin-top: 0.5em;
     margin-bottom: 0.8em;
   }
+  
   
 /* =========================================================
    Publications links bold and color optimization
@@ -263,7 +274,7 @@ h3 {
                -apple-system, "Commissioner"; /* consistent with body text */
   font-weight: 400;        /* normal font weight, not bold */
   font-size: 1.2rem;       /* slightly larger than body text (≈17~18px) */
-  color: #2f2f2f;          /* consistent with body text color */
+  color: #333;          /* consistent with body text color */
   margin-top: 0;
   margin-bottom: 1rem;
 }

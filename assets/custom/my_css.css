@@ -207,6 +207,15 @@ body {
   margin-bottom: 2.5rem;         /* 底部外边距 */
 }
 
+/* 调整 Publications 区域的间距更紧凑 */
+#publications p {
+  margin: 0.3rem 0;  /* 缩小每段之间的外边距 */
+  line-height: 1.5;  /* 减小行距让条目更密 */
+}
+
+#publications li {
+  margin-bottom: 0.6rem; /* 缩小条目之间的距离 */
+}
 
 /* =========================================================
    通用标题样式（h3）

@@ -189,31 +189,31 @@ body {
 /* =========================================================
    Section separators (Bio / Publications / CV)
    ---------------------------------------------------------
-   - only draw top border for visual rhythm
-   - symmetric padding, no double lines
+   - visually symmetric spacing to borders
+   - consistent breathing space between blocks
    ========================================================= */
-
    #bio, #publications, #cv {
-    margin: 2.5rem 0;       /* 上下外边距对称 */
-    padding: 2rem 0;        /* 上下内边距对称 */
-    border-top: 1px solid #ddd;  /* 只画上边线 */
+    border-top: 1px solid #ddd;    /* 单条上分割线 */
+    padding-top: 2rem;             /* 上内距：文字离线的距离 */
+    padding-bottom: 2rem;          /* 下内距：文字离线的距离 */
+    margin: 0;                     /* 不使用 margin，避免折叠不对称 */
   }
   
-  /* 如果你希望最顶部没有线，可以去掉第一个块的顶部线 */
+  /* 第一个块不需要顶部线 */
   #bio {
     border-top: none;
   }
   
-  /* 最后一个块（CV）下方可以加一条线以收尾 */
+  /* 最后一个块加底部分割线 */
   #cv {
     border-bottom: 1px solid #ddd;
   }
   
+  /* 标题间距控制（让标题与线距离均匀） */
   #bio h3, #publications h3, #cv h3 {
-    margin-top: 0.5em;
-    margin-bottom: 0.8em;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
-  
   
 /* =========================================================
    Publications links bold and color optimization

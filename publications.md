@@ -6,11 +6,8 @@
   *2024 International Conference on Activity and Behavior Computing (ABC)*, 2024. [[link]](https://doi.org/10.1109/ABC61795.2024.10651886)
   
 * **Wang, Y.**, Basiri, A., Gerrits, P., Solomon, G., Woelk, S., & Fidel Pereira, M.
-  Why do pedestrians get lost? A case study of personal, situational, and environmental factors in Greater London.  
-  (under review).
+  Why do pedestrians get lost? A case study of personal, situational, and environmental factors in Greater London. (under review).
   
 
-* **Wang, Y.**, & Basiri, A.   
-  From static to dynamic: evaluating model robustness with historical street view images in cross-view geolocalisation.  
-  (under review).
+* **Wang, Y.**, & Basiri, A. From static to dynamic: evaluating model robustness with historical street view images in cross-view geolocalisation. (under review).
   

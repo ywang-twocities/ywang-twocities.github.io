@@ -187,63 +187,63 @@ body {
 
 
 /* =========================================================
-   内容区块分隔线（Bio / Publications / CV）
+   content block separator (Bio / Publications / CV)
    ---------------------------------------------------------
-   - 仅在区块之间绘制“一条”分隔线，避免双线
-   - 调整上下内外边距，保证视觉节奏
+   - draw a single line between blocks to avoid double lines
+   - adjust top and bottom margins to ensure visual rhythm
    ========================================================= */
 
-/* 在 Bio→Publications、Publications→CV 之间绘制上边框作为分隔线 */
+/* draw a top border between Bio→Publications and Publications→CV as a separator */
 #bio + #publications,
 #publications + #cv {
-  border-top: 1px solid #ddd;    /* 分隔线：浅灰 */
-  padding-top: 2.5rem;           /* 分隔线下的上内边距，拉开与标题的距离 */
-  margin-top: 2.5rem;            /* 与上一块的外间距，避免拥挤 */
+  border-top: 1px solid #ddd;    /* separator: light gray */
+  padding-top: 2.5rem;           /* top inner margin under separator,拉开与标题的距离 */
+  margin-top: 2.5rem;            /* outer margin with previous block, avoid拥挤 */
 }
 
-/* 三个区块自身的下方留白，形成“呼吸感” */
+/* three blocks themselves leave blank below,形成“呼吸感” */
 #bio, #publications, #cv {
-  padding-bottom: 2.5rem;        /* 底部内边距 */
-  margin-bottom: 2.5rem;         /* 底部外边距 */
+  padding-bottom: 2.5rem;        /* bottom inner margin */
+  margin-bottom: 2.5rem;         /* bottom outer margin */
 }
 
-/* 调整 Bio 和 Publications 区域的间距更紧凑 */
+/* adjust the spacing between Bio and Publications blocks to be more compact */
 #bio p, #publications p {
-  margin: 0.3rem 0;  /* 缩小每段之间的外边距 */
-  line-height: 1.5;  /* 减小行距让条目更密 */
+  margin: 0.3rem 0;  /* shrink the outer margin between paragraphs */
+  line-height: 1.5;  /* decrease line height to make items denser */
 }
 
 #publications li {
-  margin-bottom: 0.6rem; /* 缩小条目之间的距离 */
+  margin-bottom: 0.6rem; /* shrink the distance between items */
 }
 /* =========================================================
-   Publications 链接加粗与配色优化
+   Publications links bold and color optimization
    ========================================================= */
    #publications strong {
     text-decoration: underline;
-    text-decoration-color: rgba(0, 0, 0, 0.4); /* 半透明灰色线条 */
+    text-decoration-color: rgba(0, 0, 0, 0.4); /* semi-transparent gray line */
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
   }
   
    #publications a {
-    color: #004d7a;           /* 与站点主色调一致的深蓝 */
-    font-weight: 400;         /* 加粗链接文字 */
-    text-decoration: none;    /* 去掉下划线 */
-    font-family: "Commissioner", sans-serif; /* 无衬线字体更显粗体 */
-    letter-spacing: 0.02em;   /* 稍微放松字距 */
+    color: #004d7a;           /* deep blue consistent with site main color */
+    font-weight: 400;         /* bold links */
+    text-decoration: none;    /* remove underline */
+    font-family: "Commissioner", sans-serif; /* sans-serif font for bold links */
+    letter-spacing: 0.02em;   /* slightly relax letter spacing */
     transition: color 0.2s ease;
   }
   
   #publications a:hover {
-    color: #a61c1c;           /* 悬停时更深蓝 */
+    color: #a61c1c;           /* deeper blue on hover */
     text-decoration: underline;
   }
 
   #bio a {
-    color: #004d7a;           /* 深蓝，与 header 保持一致 */
-    text-decoration: none;    /* 去下划线 */
-    border-bottom: 1px solid rgba(0,77,122,0.25); /* 模拟下划线 */
+    color: #004d7a;           /* deep blue consistent with header */
+    text-decoration: none;    /* remove underline */
+    border-bottom: 1px solid rgba(0,77,122,0.25); /* simulate underline */
     transition: color 0.2s ease, border-color 0.2s ease;
   }
   
@@ -253,103 +253,105 @@ body {
   }
 
 /* =========================================================
-   Bio 段落格式优化：行距 + 间距 + 对齐
+   Bio paragraph format optimization: line spacing + spacing + alignment
    ========================================================= */
    #bio p {
     margin-top: 0;
-    margin-bottom: 1.4em;     /* 段落间距 */
-    line-height: 1.75;        /* 行距 */
-    text-align: justify;      /* 两端对齐 */
-    text-justify: inter-word; /* 优化单词间距 */
+    margin-bottom: 1.4em;     /* paragraph spacing */
+    line-height: 1.75;        /* line spacing */
+    text-align: justify;      /* justify text */
+    text-justify: inter-word; /* optimize word spacing */
   }
   
 /* =========================================================
-   通用标题样式（h3）
+   general title style (h3)
    ---------------------------------------------------------
-   - 统一各模块标题的字体、字号、颜色与外边距
+   - unify the font, font size, color, and outer margin of each module title
    ========================================================= */
 
 h3 {
   font-family: "Linux Biolinum", "Optima", "Roboto Slab", "Open Sans", "Helvetica Neue",
                "Palatino", "Microsoft Yahei", Helvetica, "Raleway",
-               -apple-system, "Commissioner"; /* 与正文一致 */
-  font-weight: 400;        /* 正常字重，不加粗 */
-  font-size: 1.2rem;       /* 比正文稍大即可（≈17~18px） */
-  color: #2f2f2f;          /* 与正文色一致 */
+               -apple-system, "Commissioner"; /* consistent with body text */
+  font-weight: 400;        /* normal font weight, not bold */
+  font-size: 1.2rem;       /* slightly larger than body text (≈17~18px) */
+  color: #2f2f2f;          /* consistent with body text color */
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
 
 /* =========================================================
-   正文段落与列表（Paragraph & List）
+   body text and list (Paragraph & List)
    ---------------------------------------------------------
-   - 继承 body 的排版设置，统一视觉
-   - 列表外边距与行间距
+   - inherit the typography settings of body to unify the visual
+   - list outer margin and line spacing
    ========================================================= */
 
-/* 段落与列表项：完全继承 body 的字体/字号/行距/颜色 */
+/* paragraph and list item: completely inherit the font/font size/line spacing/color of body */
 p, li {
-  font: inherit;                 /* 同时继承 family/size/weight/line-height */
-  color: inherit;                /* 继承文字颜色 */
+  font: inherit;                 /* inherit family/size/weight/line-height */
+  color: inherit;                /* inherit text color */
 }
 
-/* 无序列表：左缩进与底部间距 */
+/* unordered list: left indent and bottom spacing */
 ul {
-  margin: 0 0 1rem 1.2rem;       /* 上右下左：左侧缩进 1.2rem，底部留白 1rem */
-  padding: 0;                    /* 去除默认内边距 */
+  margin: 0 0 1rem 1.2rem;       /* top right bottom left: left indent 1.2rem, bottom margin 1rem */
+  padding: 0;                    /* remove default inner margin */
 }
 
-/* 列表项：列表项之间的垂直间距 */
+/* list item: vertical spacing between list items */
 li {
-  margin-bottom: 0.5rem;         /* 列表项之间的行间距 */
+  margin-bottom: 0.5rem;         /* line spacing between list items */
 }
 
 
 /* =========================================================
-   页脚（Footer）
+   footer (Footer)
    ---------------------------------------------------------
-   - 细分隔线、居中与辅助信息的弱化显示
+   -细分隔线、居中与辅助信息的弱化显示
+   - draw a single line between blocks to avoid double lines
+   - adjust top and bottom margins to ensure visual rhythm
    ========================================================= */
 
 .footer {
-  text-align: center;            /* 页脚内容居中 */
-  padding: 1.5rem 0;             /* 上下内边距 */
-  font-size: 0.85rem;            /* 较小字号，弱化视觉权重 */
-  color: #777;                   /* 次级文字色 */
-  border-top: 1px solid #e5e5e5; /* 顶部分隔线 */
-  margin-top: 3rem;              /* 与主体内容的距离 */
+  text-align: center;            /* center the footer content */
+  padding: 1.5rem 0;             /* top and bottom inner margin */
+  font-size: 0.85rem;            /* smaller font size, weaken visual weight */
+  color: #777;                   /* secondary text color */
+  border-top: 1px solid #e5e5e5; /* top separator line */
+  margin-top: 3rem;              /* distance from main content */
 }
 
 
 /* =========================================================
-   响应式优化（Mobile）
+   responsive optimization (Mobile)
    ---------------------------------------------------------
-   - 小屏幕下 Header 改为纵向排列
-   - 导航条支持换行，避免溢出
+   - change the header to vertical arrangement on small screens
+   - support line breaks for the navigation bar to avoid overflow
    ========================================================= */
 
 @media (max-width: 640px) {
   .header-flex {
-    flex-direction: column;      /* 头像与信息改为上下排列 */
-    align-items: flex-start;     /* 左对齐 */
+    flex-direction: column;      /* change the avatar and information to vertical arrangement */
+    align-items: flex-start;     /* left align */
   }
   .header-info {
-    height: auto;                /* 高度自适应内容 */
-    gap: .5rem;                  /* 信息行之间的垂直间距 */
+    height: auto;                /* height adaptive to content */
+    gap: .5rem;                  /* vertical spacing between information rows */
   }
   .navbar-list {
-    flex-wrap: wrap;             /* 导航项换行，避免拥挤 */
-    gap: 1rem;                   /* 移动端减小间距 */
+    flex-wrap: wrap;             /* navigation items wrap to avoid crowding */
+    gap: 1rem;                   /* reduce spacing on mobile */
   }
 }
 
 
 /* =========================================================
-   中文字体适配（Chinese Locale）
+   Chinese font adaptation (Chinese Locale)
    ---------------------------------------------------------
-   - 在 html 标记语言为中文时，优先使用更适配中文的字体
-   - 避免中英混排时的字体跳变与高度不一致
+   - when the html language is Chinese, use the font that is more suitable for Chinese
+   - avoid font jumping and height inconsistency when mixing Chinese and English
    ========================================================= */
 
 html:lang(zh) body {

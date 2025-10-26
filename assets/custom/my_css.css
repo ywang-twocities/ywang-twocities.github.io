@@ -220,10 +220,12 @@ body {
    Publications 链接加粗与配色优化
    ========================================================= */
    #publications strong {
-    font-weight: 500;          /* 加粗提升粗度 */
-    color: #111;               /* 比正文更深 */
-    letter-spacing: 0.01em;    /* 微调字距 */
+    text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0.4); /* 半透明灰色线条 */
+    text-decoration-thickness: 0.8px;
+    text-underline-offset: 3px;
   }
+  
    #publications a {
     color: #004d7a;           /* 与站点主色调一致的深蓝 */
     font-weight: 600;         /* 加粗链接文字 */

@@ -207,8 +207,8 @@ body {
   margin-bottom: 2.5rem;         /* 底部外边距 */
 }
 
-/* 调整 Publications 区域的间距更紧凑 */
-#publications p {
+/* 调整 Bio 和 Publications 区域的间距更紧凑 */
+#bio p, #publications p {
   margin: 0.3rem 0;  /* 缩小每段之间的外边距 */
   line-height: 1.5;  /* 减小行距让条目更密 */
 }
@@ -240,6 +240,17 @@ body {
     text-decoration: underline;
   }
 
+  #bio a {
+    color: #004d7a;           /* 深蓝，与 header 保持一致 */
+    text-decoration: none;    /* 去下划线 */
+    border-bottom: 1px solid rgba(0,77,122,0.25); /* 模拟下划线 */
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  #bio a:hover {
+    color: #002f49;
+    border-bottom-color: #002f49;
+  }
   
 /* =========================================================
    通用标题样式（h3）

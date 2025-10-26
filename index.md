@@ -5,8 +5,12 @@ title: Home
 
 <div id="bio">
   <h3>Bio</h3>
-  <p>I'm a PhD candidate in Geospatial Data Science at the University of Glasgow. My research explores the intersection of geospatial AI, data ethics, and urban analytics, with emphasis on positioning, navigation, and fairness in spatial data.</p>
+  {% capture bio %}
+    {% include_relative bio.md %}
+  {% endcapture %}
+  {{ bio | markdownify }}
 </div>
+
 
 <div id="publications">
   <h3>Publications</h3>

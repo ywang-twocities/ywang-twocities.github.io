@@ -12,3 +12,10 @@ theme: null
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# 生成 sitemap.xml 时的基础配置
+defaults:
+  - scope:
+      path: ""
+    values:
+      sitemap: true

@@ -220,7 +220,7 @@ body {
    Publications 链接加粗与配色优化
    ========================================================= */
    #publications strong {
-    font-weight: 700;          /* 加粗提升粗度 */
+    font-weight: 500;          /* 加粗提升粗度 */
     color: #111;               /* 比正文更深 */
     letter-spacing: 0.01em;    /* 微调字距 */
   }

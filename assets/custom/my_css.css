@@ -39,7 +39,7 @@ body {
   font-family: "Linux Biolinum", "Optima", "Roboto Slab", "Open Sans",
                "Helvetica Neue", "Palatino", "Microsoft Yahei", Helvetica,
                "Raleway", -apple-system, "Commissioner";
-  color: #2f2f2f;
+  color: #555;
   background-color: #ffffff;
   margin: 0;
 }
@@ -187,35 +187,23 @@ body {
 
 
 /* =========================================================
-   content block separator (Bio / Publications / CV)
+   Section separators (Bio / Publications / CV)
    ---------------------------------------------------------
-   - draw a single line between blocks to avoid double lines
-   - adjust top and bottom margins to ensure visual rhythm
+   - symmetric top & bottom spacing
+   - single light-gray border for each block
    ========================================================= */
-
-/* draw a top border between Bio→Publications and Publications→CV as a separator */
-#bio + #publications,
-#publications + #cv {
-  border-top: 1px solid #ddd;    /* separator: light gray */
-  padding-top: 2.5rem;           /* top inner margin under separator,拉开与标题的距离 */
-  margin-top: 2.5rem;            /* outer margin with previous block, avoid拥挤 */
-}
-
-/* three blocks themselves leave blank below,形成“呼吸感” */
-#bio, #publications, #cv {
-  padding-bottom: 2.5rem;        /* bottom inner margin */
-  margin-bottom: 2.5rem;         /* bottom outer margin */
-}
-
-/* adjust the spacing between Bio and Publications blocks to be more compact */
-#bio p, #publications p {
-  margin: 0.3rem 0;  /* shrink the outer margin between paragraphs */
-  line-height: 1.5;  /* decrease line height to make items denser */
-}
-
-#publications li {
-  margin-bottom: 0.6rem; /* shrink the distance between items */
-}
+   #bio, #publications, #cv {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 2.5rem 0;       /* 上下外边距对称 */
+    padding: 2rem 0;        /* 上下内边距对称 */
+  }
+  
+  #bio h3, #publications h3, #cv h3 {
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+  }
+  
 /* =========================================================
    Publications links bold and color optimization
    ========================================================= */
@@ -300,58 +288,56 @@ ul {
   padding: 0;                    /* remove default inner margin */
 }
 
-/* list item: vertical spacing between list items */
+/* 列表项：列表项之间的垂直间距 */
 li {
-  margin-bottom: 0.5rem;         /* line spacing between list items */
+  margin-bottom: 0.5rem;         /* 列表项之间的行间距 */
 }
 
 
 /* =========================================================
-   footer (Footer)
+   页脚（Footer）
    ---------------------------------------------------------
-   -细分隔线、居中与辅助信息的弱化显示
-   - draw a single line between blocks to avoid double lines
-   - adjust top and bottom margins to ensure visual rhythm
+   - 细分隔线、居中与辅助信息的弱化显示
    ========================================================= */
 
 .footer {
-  text-align: center;            /* center the footer content */
-  padding: 1.5rem 0;             /* top and bottom inner margin */
-  font-size: 0.85rem;            /* smaller font size, weaken visual weight */
-  color: #777;                   /* secondary text color */
-  border-top: 1px solid #e5e5e5; /* top separator line */
-  margin-top: 3rem;              /* distance from main content */
+  text-align: center;            /* 页脚内容居中 */
+  padding: 1.5rem 0;             /* 上下内边距 */
+  font-size: 0.85rem;            /* 较小字号，弱化视觉权重 */
+  color: #777;                   /* 次级文字色 */
+  border-top: 1px solid #e5e5e5; /* 顶部分隔线 */
+  margin-top: 3rem;              /* 与主体内容的距离 */
 }
 
 
 /* =========================================================
-   responsive optimization (Mobile)
+   响应式优化（Mobile）
    ---------------------------------------------------------
-   - change the header to vertical arrangement on small screens
-   - support line breaks for the navigation bar to avoid overflow
+   - 小屏幕下 Header 改为纵向排列
+   - 导航条支持换行，避免溢出
    ========================================================= */
 
 @media (max-width: 640px) {
   .header-flex {
-    flex-direction: column;      /* change the avatar and information to vertical arrangement */
-    align-items: flex-start;     /* left align */
+    flex-direction: column;      /* 头像与信息改为上下排列 */
+    align-items: flex-start;     /* 左对齐 */
   }
   .header-info {
-    height: auto;                /* height adaptive to content */
-    gap: .5rem;                  /* vertical spacing between information rows */
+    height: auto;                /* 高度自适应内容 */
+    gap: .5rem;                  /* 信息行之间的垂直间距 */
   }
   .navbar-list {
-    flex-wrap: wrap;             /* navigation items wrap to avoid crowding */
-    gap: 1rem;                   /* reduce spacing on mobile */
+    flex-wrap: wrap;             /* 导航项换行，避免拥挤 */
+    gap: 1rem;                   /* 移动端减小间距 */
   }
 }
 
 
 /* =========================================================
-   Chinese font adaptation (Chinese Locale)
+   中文字体适配（Chinese Locale）
    ---------------------------------------------------------
-   - when the html language is Chinese, use the font that is more suitable for Chinese
-   - avoid font jumping and height inconsistency when mixing Chinese and English
+   - 在 html 标记语言为中文时，优先使用更适配中文的字体
+   - 避免中英混排时的字体跳变与高度不一致
    ========================================================= */
 
 html:lang(zh) body {
